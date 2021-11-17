@@ -14,7 +14,7 @@ clip = CLIPEmbedding(
 
 im = imread("https://picsum.photos/224/224")
 
-im = clip.embed_images([im])
+im = clip.embed_images([im]) #list of PIL Images, numpy arrays, or torch Tensors
 text = clip.embed_text(["red", "blue", "green", "yellow"])
 
 scores = clip.similarity(im, text)
