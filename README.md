@@ -21,4 +21,5 @@ scores = clip.similarity(im, text)
 ```
 
 ### Setup
-  - Install preferred version of pytorch (`'cpu'` or `'cuda'`) before installing `requirements.txt`
+  - Install preferred version of pytorch (`'cpu'` or `'cuda'`) before installing
+  - `pip install git+https://github.com/pmorris2012/CLIPEmbedding.git`
