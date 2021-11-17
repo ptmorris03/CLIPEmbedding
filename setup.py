@@ -15,7 +15,7 @@ setup(
     author='Paul Morris',
     author_email='pmorris2012@fau.edu',
     package_dir={'': 'CLIPEmbedding'},
-    packages=find_packages(where='CLIPEmbedding'),
+    packages=find_packages(),
     python_requires='>=3.6, <4',
     install_requires=['ftfy', 'numpy', 'transformers']
 )
