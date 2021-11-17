@@ -17,6 +17,9 @@ im = imread("https://picsum.photos/224/224")
 im = clip.embed_images([im]) #list of PIL Images, numpy arrays, or torch Tensors
 text = clip.embed_text(["red", "blue", "green", "yellow"])
 
+print(im.shape) #(1, 512)
+print(text.shape) #(4, 512)
+
 scores = clip.similarity(im, text, softmax=True)
 ```
 
