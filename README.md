@@ -21,6 +21,7 @@ print(im.shape) #(1, 512)
 print(text.shape) #(4, 512)
 
 scores = clip.similarity(im, text, softmax=True)
+print(scores.shape) #(1, 4)
 ```
 
 ### Setup
