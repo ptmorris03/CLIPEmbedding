@@ -83,12 +83,13 @@ class CLIPEmbedding:
         return outputs
 
 
-    def similarity(self, images: Tensor, text: Tensor):
+    def similarity(self, images: Tensor, text: Tensor, softmax: bool = True):
         """
         Arguments:
         ----------
         images: torch.Tensor of shape (n_images, n_dims)
         text: torch.Tensor of shape (n_text, n_dims)
+        softmax: bool sets whether outputs for each image are raw or sum to 1.
         
         Returns:
         --------
@@ -98,8 +99,10 @@ class CLIPEmbedding:
         text = text / text.norm(dim=-1, keepdim=True)
 
         logit_scale = self.model.logit_scale.exp()
-        logits = logit_scale * images @ text.t()
-        probability = torch.softmax(logits, dim=-1)
+        probability = logit_scale * images @ text.t()
+        
+        if softmax:
+            probability = torch.softmax(probability, dim=-1)
         
         return probability
       
