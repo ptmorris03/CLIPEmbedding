@@ -14,6 +14,7 @@ setup(
     url='https://github.com/pmorris2012/CLIPEmbedding',
     author='Paul Morris',
     author_email='pmorris2012@fau.edu',
+    package_dir={'': 'CLIPEmbedding'},
     packages=find_packages(where='CLIPEmbedding'),
     python_requires='>=3.6, <4',
     install_requires=['ftfy', 'numpy', 'transformers']
