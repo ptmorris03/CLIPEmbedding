@@ -8,8 +8,8 @@ from CLIPEmbedding import CLIPEmbedding
 from skimage.io import imread
 
 clip = CLIPEmbedding(
-    model_path="openai/clip-vit-base-patch32", #🤗 Transformers URI or Path to checkpoint file
-    device='cuda' #defaults to 'cpu'
+    #model_path="openai/clip-vit-base-patch32", #🤗 Transformers URI or Path to checkpoint file
+    #device='cuda' #defaults to 'cpu'
 )
 
 im = imread("https://picsum.photos/224/224")
